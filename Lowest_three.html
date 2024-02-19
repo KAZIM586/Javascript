@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest of Three number</title>
+</head>
+<body>
+    <script>
+        // Function to find the lowest of three numbers
+function findLowestNumber(num1, num2, num3) {
+    return Math.min(num1, num2, num3);
+}
+
+// Example usage:
+const number1 = parseFloat(prompt("Enter the first number:"));
+const number2 = parseFloat(prompt("Enter the second number:"));
+const number3 = parseFloat(prompt("Enter the third number:"));
+
+const lowestNumber = findLowestNumber(number1, number2, number3);
+
+console.log(`The lowest number among ${number1}, ${number2}, and ${number3} is: ${lowestNumber}`);
+
+    </script>
+</body>
+</html>
