@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating salary tax</title>
+</head>
+<body>
+    <script>
+        function calculateTax(salary) {
+    // Tax calculation based on income brackets
+    if (salary <= 18200) {
+        return 0;  // No tax for income up to 18,200
+    } else if (salary <= 45000) {
+        return (salary - 18200) * 0.19;  // 19% tax for income between 18,201 and $45,000
+    } else if (salary <= 120000) {
+        return 5092 + (salary - 45000) * 0.325;  // 32.5% tax for income between 45,001 and 120,000
+    } else if (salary <= 180000) {
+        return 29467 + (salary - 120000) * 0.37;  // 37% tax for income between 120,001 and 180,000
+    } else {
+        return 51667 + (salary - 180000) * 0.45;  // 45% tax for income above 180,000
+    }
+}
+
+// Example usage:
+const salary = parseFloat(prompt("Enter your annual salary:"));
+
+// Check if input is a valid number
+if (isNaN(salary) || salary < 0) {
+    console.log("Please enter a valid positive number for salary.");
+} else {
+    // Calculate tax
+    const taxAmount = calculateTax(salary);
+
+    // Display the result
+    console.log(`Your annual salary is ${salary.toFixed(2)}.`);
+    console.log(`The calculated tax is ${taxAmount.toFixed(2)}.`);
+}
+
+    </script>
+</body>
+</html>
