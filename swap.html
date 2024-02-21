@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swapping</title>
+  </head>
+  <body>
+    <script>
+      // Without using third variable
+      let a = 10;
+      let b = 20;
+      console.log("Before swapping a is ", a, "and b is ", b);
+      a = a + b;
+      b = a - b;
+      a = a - b;
+      console.log("After swapping a is ", a, "and b is ", b);
+
+      // Second method by using third variable
+
+      let c = 30;
+      let d = 40;
+      let temp = 0;
+      console.log("Before swapping a is ", c, "and b is ", d);
+      temp = c;
+      c = d;
+      d = temp;
+      console.log("After swapping a is ", c, "and b is ", d);
+    </script>
+  </body>
+</html>
