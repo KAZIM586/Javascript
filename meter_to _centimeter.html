@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meter to centieter</title>
+</head>
+<body>
+    <script>
+// Prompt the user to enter a length in meters
+var metersInput = prompt("Enter length in meters:");
+
+// Convert the input to a number
+var meters = parseFloat(metersInput);
+
+// Check if the input is a valid number
+if (isNaN(meters)) {
+    console.log("Invalid input. Please enter a valid number for length in meters.");
+} else {
+    // Convert meters to centimeters (1 meter = 100 centimeters)
+    var centimeters = meters * 100;
+
+    // Display the result
+    console.log(meters + " meters is equal to " + centimeters + " centimeters.");
+}
+
+    </script>
+</body>
+</html>
