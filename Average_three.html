@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average three numbert</title>
+</head>
+<body>
+    <script>
+        function calculateAverage(num1, num2, num3) {
+  // Calculate average without return
+  const averageWithoutReturn = (num1 + num2 + num3) / 3;
+  console.log(`Average without return: ${averageWithoutReturn}`);
+
+  // Calculate average with return
+  const average = (num1 + num2 + num3) / 3;
+  return average;
+}
+
+// calculate
+const resultWithoutReturn = calculateAverage(5, 10, 15);
+console.log(`Result without return: ${resultWithoutReturn}`);
+
+const resultWithReturn = calculateAverage(8, 12, 4);
+console.log(`Result with return: ${resultWithReturn}`);
+
+    </script>
+</body>
+</html>
