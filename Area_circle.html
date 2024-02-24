@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area circle</title>
+</head>
+<body>
+   <script>
+      // Taking input from user
+      let radius =parseFloat(prompt("Enter a number: "));
+    function calculateCircleArea(radius) {
+  // Check if the input is valid (positive number)
+  if (typeof radius !== 'number' || isNaN(radius) || radius <= 0) {
+    return 'Invalid input. Please provide a valid positive number for the radius.';
+  }
+
+  // Calculate the area
+  const area = Math.PI * Math.pow(radius, 2);
+
+  return area;
+}
+
+// Example usage:
+const area = calculateCircleArea(radius);
+console.log("Area of circle is: ",area); 
+
+   </script> 
+</body>
+</html>
