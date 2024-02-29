@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle perimeter and area</title>
+</head>
+<body>
+    <script>
+        function calculateArea(radius) {
+  // Check if the input is a valid positive number
+  if (typeof radius !== 'number' || radius <= 0) {
+    console.log('Please provide a valid positive number for the radius.');
+    return null;
+  }
+
+  // Calculate the area of the circle
+  const area = Math.PI * Math.pow(radius, 2);
+  return area.toFixed(3);
+}
+
+function calculatePerimeter(radius) {
+  // Check if the input is a valid positive number
+  if (typeof radius !== 'number' || radius <= 0) {
+    console.log('Please provide a valid positive number for the radius.');
+    return null;
+  }
+
+  // Calculate the perimeter of the circle
+  const perimeter = 2 * Math.PI * radius;
+  return perimeter.toFixed(3);
+}
+
+// Get the radius from the user
+const radiusFromUser = parseFloat(prompt('Enter the radius of the circle:'));
+
+// Calculate and display the area and perimeter
+if (!isNaN(radiusFromUser) && radiusFromUser > 0) {
+  const area = calculateArea(radiusFromUser);
+  const perimeter = calculatePerimeter(radiusFromUser);
+
+  console.log(`Radius: ${radiusFromUser}`);
+  console.log(`Area of the circle: ${area}`);
+  console.log(`Perimeter of the circle: ${perimeter}`);
+} else {
+  console.log('Invalid input for the radius. Please enter a valid positive number.');
+}
+
+    </script>
+</body>
+</html>
