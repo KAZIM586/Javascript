@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kth last</title>
+</head>
+<body>
+    <script>
+        function findKthCharacterFromEnd(inputString, k) {
+  // Check if the input string is not empty and k is a positive integer
+  if (typeof inputString !== 'string' || inputString.length === 0 || typeof k !== 'number' || k <= 0 || !Number.isInteger(k)) {
+    console.log("Please provide a valid input string and a positive integer for k.");
+    return null;
+  }
+
+  // Check if k is within the bounds of the string length
+  if (k > inputString.length) {
+    console.log("k is greater than the length of the input string.");
+    return null;
+  }
+
+  // Find the kth character from the end
+  const kthCharacterFromEnd = inputString.charAt(inputString.length - k);
+
+  return kthCharacterFromEnd;
+}
+
+// Example usage
+const inputString = "Hello, World!";
+const k = 3;
+
+// Find the 3rd character from the end
+const result = findKthCharacterFromEnd(inputString, k);
+
+// Display the result
+if (result !== null) {
+  console.log(`The ${k}th character from the end is: ${result}`);
+}
+
+    </script>
+</body>
+</html>
