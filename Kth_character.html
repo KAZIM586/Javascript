@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K th character</title>
+</head>
+<body>
+    <script>
+        function findKthCharacter(inputString, k) {
+  // Check if the input string is not empty and k is a positive integer
+  if (typeof inputString !== 'string' || inputString.length === 0 || typeof k !== 'number' || k <= 0 || !Number.isInteger(k)) {
+    console.log("Please provide a valid input string and a positive integer for k.");
+    return null;
+  }
+
+  // Check if k is within the bounds of the string length
+  if (k > inputString.length) {
+    console.log("k is greater than the length of the input string.");
+    return null;
+  }
+
+  // Find the kth character from the start
+  const kthCharacter = inputString.charAt(k - 1);
+
+  return kthCharacter;
+}
+
+// suppose input string is Hello, World!
+const inputString = "Hello, World!";
+const k = 8;   //for searching character in 8th place
+
+// Find the 7th character from the start
+const result = findKthCharacter(inputString, k);
+
+// Display the result
+if (result !== null) {
+  console.log(`The ${k}th character from the start is: ${result}`);
+}
+
+    </script>
+</body>
+</html>
