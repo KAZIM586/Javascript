@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+</head>
+<body>
+    <script>
+        function getFirstElements(array, n = 1) {
+  // Check if the input is an array
+  if (!Array.isArray(array)) {
+    console.log('Please provide an array as the first parameter.');
+    return null;
+  }
+
+  // Check if n is a positive integer
+  if (typeof n !== 'number' || n <= 0 || !Number.isInteger(n)) {
+    console.log('Please provide a valid positive integer as the second parameter.');
+    return null;
+  }
+
+  // Return the first n elements of the array
+  return array.slice(0, n);
+}
+
+// Example usage with an array
+const myArray = [11, 12, 13, 14, 15];
+
+// Get the first element
+const firstElement = getFirstElements(myArray);
+console.log('First Element of Given Array:', firstElement);
+
+// Get the first 3 elements
+const firstThreeElements = getFirstElements(myArray, 3);
+console.log('First Three Elements of Given Array:', firstThreeElements);
+
+    </script>
+</body>
+</html>
