@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Clock</title>
+  <style>
+    #clock {
+      font-size: 24px;
+      font-family: 'Arial', sans-serif;
+    }
+  </style>
+</head>
+<body>
+    <h1>CLOCK</h1>
+  <div id="clock"></div>
+
+
+  <!-- javascript program -->
+  <script > 
+
+  function updateClock() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+  
+    const formattedTime = `${hours}:${padZero(minutes)}:${padZero(seconds)}`;
+    document.getElementById('clock').textContent = formattedTime;
+  }
+  
+  function padZero(number) {
+    return number < 10 ? '0' + number : number;
+  }
+  
+  // Update the clock every second
+  setInterval(updateClock, 1000);
+  
+  // Initial update
+  updateClock();
+
+  </script>
+</body>
+</html>
