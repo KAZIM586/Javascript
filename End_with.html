@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End With</title>
+</head>
+<body>
+    <script>
+        function endsWith(inputString, suffix) {
+  // Check if the input is a string
+  if (typeof inputString !== 'string') {
+    console.log('Please provide a string as the first parameter.');
+    return false;
+  }
+
+  // Use the endsWith method to check if the string ends with the specified suffix
+  return inputString.endsWith(suffix);
+}
+
+// Example usage
+const testString = 'Welcome exercises';
+const suffixToCheck = 'exercises';
+
+// Display the result
+console.log(endsWith(testString, suffixToCheck));
+
+    </script>
+</body>
+</html>
