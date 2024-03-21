@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backgroung color Switcher</title>
+    <style>
+      .button {
+        display: inline-block;
+        cursor: pointer;
+        align-items: center;
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        box-shadow: 2px 2px 3px red;
+        text-align: center;
+        border-radius: 3%;
+        color: #fff;
+        margin-right: 1rem;
+        
+        
+      }
+      .box{
+        height: 90vh;
+        width: 100%;
+      }
+  
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: #6418a1;
+        color: red;
+        
+      }
+      h2 span{
+        color: #a82a2a;
+      }
+
+      #gray {
+        background-color: #3d3a3a;
+      }
+      #green {
+        background-color: #68a834;
+      }
+      #blue {
+        background-color: #232296;
+      }
+      #yellow {
+        background-color: #9c9530;
+      }
+      #purple {
+        background-color: #6418a1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Color Scheme Switcher</h1>
+      <span class="button" id="gray">Gray</span>
+      <span class="button" id="green">Green</span>
+      <span class="button" id="blue">Glue</span>
+      <span class="button" id="yellow">Gellow</span>
+      <span class="button" id="purple">Purple</span>
+      <h2>
+        Try clicking one of the color above
+        <span>to change the background color of this page!</span>
+      </h2>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
